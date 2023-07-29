@@ -1,9 +1,8 @@
-@import "mixins";
-@import "fonts";
-@import "vendor";
-@import "vars";
-@import "global";
+@import 'mixins';
+@import 'fonts';
+@import 'vendor';
+@import 'vars';
+@import 'global';
 
-// @import "components/header";
-
-
+@import 'components/button';
+@import 'components/promo';

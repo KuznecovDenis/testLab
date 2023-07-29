@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.page {
+  min-height: 100%;
+  font-family: GraphikLCG, sans-serif;
+}
+
+.body {
+  min-height: 100vh;
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+  overflow-anchor: none;
+  scroll-behavior: smooth;
+}
+
+.header {
+  flex: 0 0 auto;
+  position: absolute;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 288px;
+
+  @media (min-width: $mobile) {
+    max-width: 342px;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 728px;
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 1216px;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hidden {
+  display: none !important; // stylelint-disable-line declaration-no-important
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.list-reset {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}

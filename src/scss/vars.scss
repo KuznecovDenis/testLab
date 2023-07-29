@@ -1,0 +1,24 @@
+:root {
+  --black: #191c1f;
+  --dark-gray: #5e646a;
+  --gray: #83898f;
+  --mid-gray: #c2c8cd;
+  --light-gray: #eceff2;
+  --extralight-gray: #f6f8fa;
+  --white: #ffffff;
+
+  --primary: #2a6cea;
+  --primary-disabled: #abcae6;
+  --primary-hover: #397dff;
+
+  --dangerous: #f13636;
+  --success: #25cd82;
+
+  --mobile: 375px;
+  --tablet: ;
+  --desktop: ;
+}
+
+$mobile: 375px;
+$tablet: 768px;
+$desktop: 1280px;
