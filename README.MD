@@ -1,27 +1,27 @@
-# <img src='./testlablogo.svg' alt='Логотип проекта testLab' width='37' height='24'/> testLab
+# <img src="./testlablogo.svg" alt="Логотип проекта testLab" width="37" height="24"/> testLab
 
 
-<div style='background-color: #2A6CEA; padding: 10px 20px  ; border-radius: 10px; margin-bottom: 20px'>
+<div style="background-color: #2A6CEA; padding: 10px 20px; border-radius: 10px; margin-bottom: 20px;">
 
-<h2 style='color: #f5f5f5 ; border: none'>Использование</h2>
-<p style='color: #C2C8CD'> Запуск дев сервера</p>
+<h2 style="color: #f5f5f5 ; border: none;">Использование</h2>
+<p style="color: #C2C8CD;"> Запуск дев сервера</p>
 
 ```bash
 $ npm run start
 ```
-<p style='color: #C2C8CD'>  Запуск сборки в дев режиме</p>
+<p style="color: #C2C8CD;">  Запуск сборки в дев режиме</p>
 
 ```bash
 $ npm run dev
 ```
 
-<p style='color: #C2C8CD'> Запуск сборки для прода</p>
+<p style="color: #C2C8CD;"> Запуск сборки для прода</p>
 
 ```bash
 $ npm run build
 ```
 
-<p style='color: #C2C8CD'> Запуск линтера с фиксом</p>
+<p style="color: #C2C8CD;"> Запуск линтера с фиксом</p>
 
 ```bash
 $ npm run lint
