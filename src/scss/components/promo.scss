@@ -8,6 +8,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  margin-bottom: 56px;
 
   @media screen and (min-width: $desktop) {
     background-image: linear-gradient(
@@ -16,6 +17,7 @@
       ),
       url('../img/bg-promo-desktop.jpg');
     background-size: cover;
+    margin-bottom: 80px;
   }
 }
 

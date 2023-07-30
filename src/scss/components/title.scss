@@ -1,0 +1,13 @@
+.title {
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px; /* 133.333% */
+
+  @media screen and (min-width: $tablet) {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 56px;
+  }
+}
