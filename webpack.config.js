@@ -12,7 +12,7 @@ const isDev = process.env.NODE_ENV === 'development';
 const isPropd = !isDev;
 
 const filename = (ext) =>
-  isDev ? `[name].${ext}` : `[name].[contenthash].${ext}`;
+  isDev ? `[name]${ext}` : `[name].[contenthash]${ext}`;
 
 const optimization = () => {
   const configObject = {
@@ -86,7 +86,7 @@ module.exports = {
   entry: './js/main.js',
   output: {
     path: path.resolve(__dirname, 'app'),
-    filename: `./js/${filename('js')}`,
+    filename: `./js/${filename('.js')}`,
     clean: true,
     assetModuleFilename: `./img/${filename('[ext]')}`,
   },
@@ -122,16 +122,16 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
-      {
-        test: /\.(jpg|png|svg|jpeg|gif|webp)$/,
-        type: 'asset/resource',
-        generator: {
-          filename: `./img/${filename('[ext]')}`,
-        },
-      },
+      // {
+      //   test: /\.(jpg|png|svg|jpeg|gif|webp)$/,
+      //   type: 'asset/resource',
+      //   generator: {
+      //     filename: `./img/${filename('[ext]')}`,
+      //   },
+      // },
       {
         test: /\.ico$/,
-        type: 'asset/resource',
+        type: 'asset',
         generator: {
           filename: `./${filename('[ext]')}`,
         },
@@ -162,7 +162,7 @@ module.exports = {
       inject: 'body',
     }),
     new MiniCssExtractPlugin({
-      filename: `./css/${filename('css')}`,
+      filename: `./css/${filename('.css')}`,
     }),
     new ImageminWebpWebpackPlugin({
       detailedLogs: true,
@@ -172,6 +172,10 @@ module.exports = {
         {
           from: path.resolve(__dirname, 'src/assets'),
           to: path.resolve(__dirname, 'app'),
+        },
+        {
+          from: path.resolve(__dirname, 'src/img'),
+          to: path.resolve(__dirname, 'app/img'),
         },
       ],
     }),
