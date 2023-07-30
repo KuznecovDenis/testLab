@@ -7,7 +7,44 @@
     <title>testLab - тестовая лаборатория</title>
   </head>
   <body class="body">
-    <header class="header">header</header>
+    <header class="header">
+      <div class="header__container">
+        <a href="/" class="header__logo logo">
+          <img
+            loading="lazy"
+            src="img/logo.svg"
+            width="120"
+            height="24"
+            alt="Логотип testLab"
+          />
+        </a>
+        <nav class="header__nav nav" title="">
+          <ul class="nav__list list-reset">
+            <li class="nav__item">
+              <a href="#" class="nav__link">Как это работает </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#" class="nav__link">3-й блок</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Вопросы и ответы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__link">Форма</a>
+            </li>
+          </ul>
+        </nav>
+        <button
+          class="header__burger burger"
+          aria-label="Открыть меню"
+          aria-expanded="false"
+          data-burger
+        >
+          <div class="burger__icon"></div>
+        </button>
+      </div>
+    </header>
     <main class="main">
       <section class="promo">
         <div class="container promo__container">

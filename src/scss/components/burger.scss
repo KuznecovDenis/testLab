@@ -1,0 +1,37 @@
+.burger {
+  --burger-line-height: 2px;
+  border: none;
+
+  background-color: transparent;
+  width: 62px;
+  height: 62px;
+  position: relative;
+  color: var(--white);
+
+  &__icon {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    width: 22px;
+    height: 12px;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(100% - var(--burger-line-height));
+      width: 100%;
+      height: var(--burger-line-height);
+      background-color: currentcolor;
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::before {
+      top: 0;
+    }
+  }
+}

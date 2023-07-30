@@ -1,0 +1,112 @@
+.nav {
+  --header-height: 80px;
+  position: fixed;
+  background-color: var(--white);
+  color: var(--gray);
+  width: 100%;
+  top: var(--header-height);
+  left: 0;
+  padding: 0 16px;
+  height: 100vh;
+  z-index: -1;
+  overflow-y: auto;
+  display: none;
+
+  &::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: var(--header-height);
+    width: 100%;
+    background-color: var(--white);
+  }
+
+  @media screen and (min-width: $desktop) {
+    position: initial;
+    padding: 0;
+    background-color: transparent;
+    height: initial;
+    color: var(--white);
+    width: initial;
+    overflow: initial;
+    display: block;
+    z-index: 1;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.nav__list {
+  @media screen and (min-width: $desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.nav__item {
+  font-size: 18px;
+
+  font-weight: 400;
+  line-height: 32px;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-gray);
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 24px;
+
+    font-size: 16px;
+    line-height: 28px;
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    @media (hover: hover) {
+      &:hover {
+        &::after {
+          display: block;
+          bottom: 16px;
+        }
+      }
+    }
+  }
+}
+
+.nav__link {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+
+  padding: 16px 0px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-image: url(../img/arrow-right.svg);
+    width: 24px;
+    height: 24px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  @media screen and (min-width: $desktop) {
+    &::after {
+      display: none;
+    }
+  }
+}
