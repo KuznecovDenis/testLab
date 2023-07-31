@@ -14,3 +14,132 @@
     padding-top: 57px;
   }
 }
+
+.reviews__container {
+  max-width: 1087px;
+}
+.reviews__title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+
+  margin-bottom: 26px;
+}
+
+.review {
+  padding: 22px 22px 33px 22px;
+  border-radius: 8px;
+  background: var(--white);
+  box-shadow: 0px 5px 24px 0px rgba(0, 0, 0, 0.1);
+
+  @media screen and (min-width: $tablet) {
+    height: 100%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 341px;
+  }
+}
+
+.review:hover {
+  box-shadow: 0px 15px 24px 0px rgba(0, 0, 0, 0.1);
+}
+
+.review__autor {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.review__photo {
+  width: 44px;
+  height: 44px;
+  margin-right: 16px;
+  border-radius: 50%;
+}
+
+.review__name {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 4px;
+}
+
+.review__city {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.owl-stage {
+  margin-bottom: 38px;
+
+  @media screen and (min-width: 375px) {
+    margin-bottom: 40px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 50px;
+    display: flex;
+  }
+}
+
+.owl-nav {
+  position: absolute;
+  display: flex;
+  top: 105px;
+  left: -58px;
+  width: 1216px;
+  z-index: -1;
+  justify-content: space-between;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  width: 8px;
+  height: 8px;
+  background-color: var(--mid-gray);
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background-color: var(--primary);
+}
+
+.owl-theme .owl-dots .owl-dot:hover span {
+  background-color: var(--primary-hover);
+}
+
+.owl-carousel .owl-nav button.owl-prev span,
+.owl-carousel .owl-nav button.owl-next span {
+  display: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev,
+.owl-carousel .owl-nav button.owl-next {
+  margin: 0;
+  width: 60px;
+  height: 100px;
+  background-image: url(../img/arrow-slider.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 1;
+}
+
+.owl-carousel .owl-nav button.owl-next {
+  transform: rotate(180deg);
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover,
+.owl-carousel .owl-nav button.owl-next:hover {
+  background-color: transparent;
+  background-image: url(../img/arrow-slider-right-hover.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.owl-carousel .owl-nav button.owl-next:hover {
+  transform: none;
+}
+
+.owl-carousel .owl-nav button.owl-prev:hover {
+  transform: rotate(180deg);
+}

@@ -89,7 +89,7 @@ module.exports = {
     path: path.resolve(__dirname, 'app'),
     filename: `./js/${filename('.js')}`,
     clean: true,
-    assetModuleFilename: `./img/${filename('[ext]')}`,
+    // assetModuleFilename: `./img/${filename('[ext]')}`,
   },
   optimization: optimization(),
   devtool: isPropd ? false : 'source-map',
@@ -123,13 +123,13 @@ module.exports = {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
-      // {
-      //   test: /\.(jpg|png|svg|jpeg|gif|webp)$/,
-      //   type: 'asset/resource',
-      //   generator: {
-      //     filename: `./img/${filename('[ext]')}`,
-      //   },
-      // },
+      {
+        test: /\.(jpg|png|svg|jpeg|gif|webp)$/,
+        type: 'asset/resource',
+        generator: {
+          filename: `./img/${filename('[ext]')}`,
+        },
+      },
       {
         test: /\.ico$/,
         type: 'asset',

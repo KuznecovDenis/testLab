@@ -1,4 +1,3 @@
-import $ from 'jquery';
 import '../scss/main.scss';
 import '../index.html';
 import '../../node_modules/focus-visible/dist/focus-visible';
@@ -11,22 +10,25 @@ $(function () {
   $(document).ready(function () {
     $('.owl-carousel').owlCarousel({
       // center: true,
-      margin: 10,
       loop: true,
       responsiveClass: true,
+      dots: true,
+      dotsEach: true,
       responsive: {
         0: {
+          margin: 16,
           items: 1,
-          nav: true,
+          autoHeight: true,
         },
-        600: {
+        768: {
           items: 2,
-          nav: true,
+          margin: 24,
         },
-        1000: {
+        1280: {
           items: 3,
           nav: true,
-          loop: false,
+          margin: 32,
+          controlsClass: true,
         },
       },
     });
