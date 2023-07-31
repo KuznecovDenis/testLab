@@ -1,0 +1,21 @@
+.footer {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--light-gray);
+  }
+}
+
+.footer__container {
+  padding: 28px 0;
+}
+
+.footer__copirite {
+  text-align: center;
+}
