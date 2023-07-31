@@ -89,8 +89,8 @@ module.exports = {
     path: path.resolve(__dirname, 'app'),
     filename: `./js/${filename('.js')}`,
     clean: true,
-    // assetModuleFilename: `./img/${filename('[ext]')}`,
   },
+  stats: { children: true },
   optimization: optimization(),
   devtool: isPropd ? false : 'source-map',
   devServer: {
@@ -117,7 +117,11 @@ module.exports = {
               sourceMap: true,
             },
           },
+          'sass-loader',
         ],
+        generator: {
+          filename: `./css/${filename('[ext]')}`,
+        },
       },
       {
         test: /\.s[ac]ss$/i,

@@ -1,6 +1,8 @@
 import '../scss/main.scss';
 import '../index.html';
 import '../../node_modules/focus-visible/dist/focus-visible';
+import '../../node_modules/owl.carousel/dist/assets/owl.carousel.min.css';
+import '../../node_modules/owl.carousel/dist/assets/owl.theme.default.min.css';
 import menu from './components/menu';
 import 'owl.carousel';
 
