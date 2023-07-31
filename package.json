@@ -3,11 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "homepage": "https://kuznecovdenis.github.io/testLab",
   "scripts": {
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "start": "cross-env NODE_ENV=development webpack serve --mode development",
-    "lint": "stylelint \"**/*.{scss,sass}\" --fix"
+    "lint": "stylelint \"**/*.{scss,sass}\" --fix",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d app"
   },
   "author": "Denis Kuznetsov",
   "license": "ISC",
@@ -19,6 +22,7 @@
     "cross-env": "^7.0.3",
     "css-loader": "^6.8.1",
     "css-minimizer-webpack-plugin": "^5.0.1",
+    "gh-pages": "^5.0.0",
     "html-loader": "^4.2.0",
     "html-webpack-plugin": "^5.5.3",
     "image-minimizer-webpack-plugin": "^3.8.3",
