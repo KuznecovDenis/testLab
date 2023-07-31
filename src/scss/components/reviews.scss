@@ -88,7 +88,7 @@
   }
 }
 
-.owl-nav {
+.reviews .owl-nav {
   position: absolute;
   display: flex;
   top: 105px;
@@ -98,27 +98,27 @@
   justify-content: space-between;
 }
 
-.owl-theme .owl-dots .owl-dot span {
+.reviews .owl-theme .owl-dots .owl-dot span {
   width: 8px;
   height: 8px;
   background-color: var(--mid-gray);
 }
 
-.owl-theme .owl-dots .owl-dot.active span {
+.reviews .owl-theme .owl-dots .owl-dot.active span {
   background-color: var(--primary);
 }
 
-.owl-theme .owl-dots .owl-dot:hover span {
+.reviews .owl-theme .owl-dots .owl-dot:hover span {
   background-color: var(--primary-hover);
 }
 
-.owl-carousel .owl-nav button.owl-prev span,
-.owl-carousel .owl-nav button.owl-next span {
+.reviews .owl-carousel .owl-nav button.owl-prev span,
+.reviews .owl-carousel .owl-nav button.owl-next span {
   display: none;
 }
 
-.owl-carousel .owl-nav button.owl-prev,
-.owl-carousel .owl-nav button.owl-next {
+.reviews .owl-carousel .owl-nav button.owl-prev,
+.reviews .owl-carousel .owl-nav button.owl-next {
   margin: 0;
   width: 60px;
   height: 100px;
@@ -128,22 +128,22 @@
   opacity: 1;
 }
 
-.owl-carousel .owl-nav button.owl-next {
+.reviews .owl-carousel .owl-nav button.owl-next {
   transform: rotate(180deg);
 }
 
-.owl-carousel .owl-nav button.owl-prev:hover,
-.owl-carousel .owl-nav button.owl-next:hover {
+.reviews .owl-carousel .owl-nav button.owl-prev:hover,
+.reviews .owl-carousel .owl-nav button.owl-next:hover {
   background-color: transparent;
   background-image: url('../img/arrow-slider-hover.svg');
   background-position: center;
   background-repeat: no-repeat;
 }
 
-.owl-carousel .owl-nav button.owl-next:hover {
+.reviews .owl-carousel .owl-nav button.owl-next:hover {
   transform: none;
 }
 
-.owl-carousel .owl-nav button.owl-prev:hover {
+.reviews .owl-carousel .owl-nav button.owl-prev:hover {
   transform: rotate(180deg);
 }
